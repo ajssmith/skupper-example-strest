@@ -1,5 +1,7 @@
 # Skupper strest-grpc example
 
+strest-grpc home: https://github.com/BuoyantIO/strest-grpc
+
 ## Step 1:
    ```bash
    git clone https://github.com/ajssmith/skupper-example-strest.git
