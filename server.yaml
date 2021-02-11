@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: strest-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: strest-server
+  template:
+    metadata:
+      labels:
+        app: strest-server
+    spec:
+      containers:
+      - name: strest-server
+        image: buoyantio/strest-grpc:latest
+        args:
+        - "server"
+        - "--address=:11111"
+        ports:
+        - name: grpc
+          containerPort: 11111
